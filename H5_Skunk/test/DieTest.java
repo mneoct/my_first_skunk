@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.experimental.categories.Categories.ExcludeCategory;
 
 import edu.princeton.cs.introcs.StdOut;
+import skunk.Die;
 
 public class DieTest
 {

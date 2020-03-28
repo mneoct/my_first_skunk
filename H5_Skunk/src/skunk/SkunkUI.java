@@ -1,3 +1,4 @@
+package skunk;
 import edu.princeton.cs.introcs.*;
 
 public class SkunkUI implements UI

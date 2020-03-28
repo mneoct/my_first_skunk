@@ -1,3 +1,4 @@
+package skunk;
 
 public interface UI
 {

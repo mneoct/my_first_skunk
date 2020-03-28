@@ -1,0 +1,452 @@
+src/skunk/Dice.java:14:	DataClass: The class 'Dice' is suspected to be a Data Class (WOC=30.000%, NOPA=1, NOAM=5, WMC=12)
+src/skunk/Dice.java:14:	DataClass: The class 'Dice' is suspected to be a Data Class (WOC=30.000%, NOPA=1, NOAM=5, WMC=12)
+src/skunk/Dice.java:14:	ShortClassName: Avoid short class names like Dice
+src/skunk/Dice.java:14:	ShortClassName: Avoid short class names like Dice
+src/skunk/Dice.java:19:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Dice.java:19:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Dice.java:19:	CommentRequired: Field comments are required
+src/skunk/Dice.java:19:	CommentRequired: Field comments are required
+src/skunk/Dice.java:20:	CommentRequired: Field comments are required
+src/skunk/Dice.java:20:	CommentRequired: Field comments are required
+src/skunk/Dice.java:21:	CommentRequired: Field comments are required
+src/skunk/Dice.java:21:	CommentRequired: Field comments are required
+src/skunk/Dice.java:26:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:26:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:33:	ConstructorCallsOverridableMethod: Overridable method 'roll' called during object construction
+src/skunk/Dice.java:33:	ConstructorCallsOverridableMethod: Overridable method 'roll' called during object construction
+src/skunk/Dice.java:36:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:36:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:36:	MethodArgumentCouldBeFinal: Parameter 'die1' is not assigned and could be declared final
+src/skunk/Dice.java:36:	MethodArgumentCouldBeFinal: Parameter 'die1' is not assigned and could be declared final
+src/skunk/Dice.java:36:	MethodArgumentCouldBeFinal: Parameter 'die2' is not assigned and could be declared final
+src/skunk/Dice.java:36:	MethodArgumentCouldBeFinal: Parameter 'die2' is not assigned and could be declared final
+src/skunk/Dice.java:50:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:50:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:61:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:61:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:61:	MissingOverride: The method 'toString()' is missing an @Override annotation.
+src/skunk/Dice.java:61:	MissingOverride: The method 'toString()' is missing an @Override annotation.
+src/skunk/Dice.java:78:	MethodArgumentCouldBeFinal: Parameter 'd' is not assigned and could be declared final
+src/skunk/Dice.java:78:	MethodArgumentCouldBeFinal: Parameter 'd' is not assigned and could be declared final
+src/skunk/Dice.java:78:	ShortVariable: Avoid variables with short names like d
+src/skunk/Dice.java:78:	ShortVariable: Avoid variables with short names like d
+src/skunk/Dice.java:83:	MethodArgumentCouldBeFinal: Parameter 'd' is not assigned and could be declared final
+src/skunk/Dice.java:83:	MethodArgumentCouldBeFinal: Parameter 'd' is not assigned and could be declared final
+src/skunk/Dice.java:83:	ShortVariable: Avoid variables with short names like d
+src/skunk/Dice.java:83:	ShortVariable: Avoid variables with short names like d
+src/skunk/Dice.java:88:	CommentRequired: Field comments are required
+src/skunk/Dice.java:88:	CommentRequired: Field comments are required
+src/skunk/Dice.java:88:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/skunk/Dice.java:88:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/skunk/Dice.java:90:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:90:	CommentRequired: Public method and constructor comments are required
+src/skunk/Dice.java:90:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/Dice.java:90:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/Dice.java:92:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'dice1' (lines '92'-'106').
+src/skunk/Dice.java:92:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'dice1' (lines '92'-'106').
+src/skunk/Dice.java:92:	LocalVariableCouldBeFinal: Local variable 'dice1' could be declared final
+src/skunk/Dice.java:92:	LocalVariableCouldBeFinal: Local variable 'dice1' could be declared final
+src/skunk/Dice.java:93:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'doubleSkunkCount' (lines '93'-'101').
+src/skunk/Dice.java:93:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'doubleSkunkCount' (lines '93'-'101').
+src/skunk/Dice.java:100:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/Dice.java:100:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/Dice.java:100:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/skunk/Dice.java:100:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/skunk/Dice.java:101:	ControlStatementBraces: This statement should have braces
+src/skunk/Dice.java:101:	ControlStatementBraces: This statement should have braces
+src/skunk/Dice.java:101:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'doubleSkunkCount' (lines '101'-'101').
+src/skunk/Dice.java:101:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'doubleSkunkCount' (lines '101'-'101').
+src/skunk/Die.java:3:	CommentRequired: Class comments are required
+src/skunk/Die.java:3:	CommentRequired: Class comments are required
+src/skunk/Die.java:3:	ShortClassName: Avoid short class names like Die
+src/skunk/Die.java:3:	ShortClassName: Avoid short class names like Die
+src/skunk/Die.java:5:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:5:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:5:	CommentRequired: Field comments are required
+src/skunk/Die.java:5:	CommentRequired: Field comments are required
+src/skunk/Die.java:6:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:6:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:6:	CommentRequired: Field comments are required
+src/skunk/Die.java:6:	CommentRequired: Field comments are required
+src/skunk/Die.java:6:	RedundantFieldInitializer: Avoid using redundant field initializer for 'predictible'
+src/skunk/Die.java:6:	RedundantFieldInitializer: Avoid using redundant field initializer for 'predictible'
+src/skunk/Die.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:7:	CommentRequired: Field comments are required
+src/skunk/Die.java:7:	CommentRequired: Field comments are required
+src/skunk/Die.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Die.java:8:	CommentRequired: Field comments are required
+src/skunk/Die.java:8:	CommentRequired: Field comments are required
+src/skunk/Die.java:8:	FieldNamingConventions: The field name 'index_of_next_roll' doesn't match '[a-z][a-zA-Z0-9]*'
+src/skunk/Die.java:8:	FieldNamingConventions: The field name 'index_of_next_roll' doesn't match '[a-z][a-zA-Z0-9]*'
+src/skunk/Die.java:8:	LongVariable: Avoid excessively long variable names like index_of_next_roll
+src/skunk/Die.java:8:	LongVariable: Avoid excessively long variable names like index_of_next_roll
+src/skunk/Die.java:8:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'index_of_next_roll' is not final.
+src/skunk/Die.java:8:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'index_of_next_roll' is not final.
+src/skunk/Die.java:10:	CommentRequired: Public method and constructor comments are required
+src/skunk/Die.java:10:	CommentRequired: Public method and constructor comments are required
+src/skunk/Die.java:12:	ConstructorCallsOverridableMethod: Overridable method 'roll' called during object construction
+src/skunk/Die.java:12:	ConstructorCallsOverridableMethod: Overridable method 'roll' called during object construction
+src/skunk/Die.java:15:	ArrayIsStoredDirectly: The user-supplied array 'predictable_rolls' is stored directly.
+src/skunk/Die.java:15:	ArrayIsStoredDirectly: The user-supplied array 'predictable_rolls' is stored directly.
+src/skunk/Die.java:15:	CommentRequired: Public method and constructor comments are required
+src/skunk/Die.java:15:	CommentRequired: Public method and constructor comments are required
+src/skunk/Die.java:15:	FormalParameterNamingConventions: The method parameter name 'predictable_rolls' doesn't match '[a-z][a-zA-Z0-9]*'
+src/skunk/Die.java:15:	FormalParameterNamingConventions: The method parameter name 'predictable_rolls' doesn't match '[a-z][a-zA-Z0-9]*'
+src/skunk/Die.java:15:	MethodArgumentCouldBeFinal: Parameter 'predictable_rolls' is not assigned and could be declared final
+src/skunk/Die.java:15:	MethodArgumentCouldBeFinal: Parameter 'predictable_rolls' is not assigned and could be declared final
+src/skunk/Die.java:15:	UseVarargs: Consider using varargs for methods or constructors which take an array the last parameter.
+src/skunk/Die.java:15:	UseVarargs: Consider using varargs for methods or constructors which take an array the last parameter.
+src/skunk/Die.java:15:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'predictable_rolls' is not final.
+src/skunk/Die.java:15:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'predictable_rolls' is not final.
+src/skunk/Die.java:19:	AvoidThrowingRawExceptionTypes: Avoid throwing raw exception types.
+src/skunk/Die.java:19:	AvoidThrowingRawExceptionTypes: Avoid throwing raw exception types.
+src/skunk/Die.java:34:	CommentRequired: Public method and constructor comments are required
+src/skunk/Die.java:34:	CommentRequired: Public method and constructor comments are required
+src/skunk/Die.java:37:	ConfusingTernary: Avoid if (x != y) ..; else ..;
+src/skunk/Die.java:37:	ConfusingTernary: Avoid if (x != y) ..; else ..;
+src/skunk/Die.java:38:	ControlStatementBraces: This statement should have braces
+src/skunk/Die.java:38:	ControlStatementBraces: This statement should have braces
+src/skunk/Die.java:38:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
+src/skunk/Die.java:38:	IfElseStmtsMustUseBraces: Avoid using if...else statements without curly braces
+src/skunk/Player.java:3:	CommentRequired: Class comments are required
+src/skunk/Player.java:3:	CommentRequired: Class comments are required
+src/skunk/Player.java:3:	DataClass: The class 'Player' is suspected to be a Data Class (WOC=23.077%, NOPA=5, NOAM=8, WMC=13)
+src/skunk/Player.java:3:	DataClass: The class 'Player' is suspected to be a Data Class (WOC=23.077%, NOPA=5, NOAM=8, WMC=13)
+src/skunk/Player.java:5:	CommentRequired: Field comments are required
+src/skunk/Player.java:5:	CommentRequired: Field comments are required
+src/skunk/Player.java:6:	CommentRequired: Field comments are required
+src/skunk/Player.java:6:	CommentRequired: Field comments are required
+src/skunk/Player.java:7:	CommentRequired: Field comments are required
+src/skunk/Player.java:7:	CommentRequired: Field comments are required
+src/skunk/Player.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Player.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/Player.java:8:	CommentRequired: Field comments are required
+src/skunk/Player.java:8:	CommentRequired: Field comments are required
+src/skunk/Player.java:9:	CommentRequired: Field comments are required
+src/skunk/Player.java:9:	CommentRequired: Field comments are required
+src/skunk/Player.java:11:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:11:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:20:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:20:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:20:	LongVariable: Avoid excessively long variable names like startingChipsPerPlayer
+src/skunk/Player.java:20:	LongVariable: Avoid excessively long variable names like startingChipsPerPlayer
+src/skunk/Player.java:20:	MethodArgumentCouldBeFinal: Parameter 'startingChipsPerPlayer' is not assigned and could be declared final
+src/skunk/Player.java:20:	MethodArgumentCouldBeFinal: Parameter 'startingChipsPerPlayer' is not assigned and could be declared final
+src/skunk/Player.java:26:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:26:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:26:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/Player.java:26:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/Player.java:31:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:31:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:31:	MethodArgumentCouldBeFinal: Parameter 'lastTotal' is not assigned and could be declared final
+src/skunk/Player.java:31:	MethodArgumentCouldBeFinal: Parameter 'lastTotal' is not assigned and could be declared final
+src/skunk/Player.java:36:	MethodArgumentCouldBeFinal: Parameter 'newRollScore' is not assigned and could be declared final
+src/skunk/Player.java:36:	MethodArgumentCouldBeFinal: Parameter 'newRollScore' is not assigned and could be declared final
+src/skunk/Player.java:51:	MethodArgumentCouldBeFinal: Parameter 'newChips' is not assigned and could be declared final
+src/skunk/Player.java:51:	MethodArgumentCouldBeFinal: Parameter 'newChips' is not assigned and could be declared final
+src/skunk/Player.java:56:	MethodArgumentCouldBeFinal: Parameter 'newScore' is not assigned and could be declared final
+src/skunk/Player.java:56:	MethodArgumentCouldBeFinal: Parameter 'newScore' is not assigned and could be declared final
+src/skunk/Player.java:66:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:66:	CommentRequired: Public method and constructor comments are required
+src/skunk/Player.java:72:	MethodArgumentCouldBeFinal: Parameter 'i' is not assigned and could be declared final
+src/skunk/Player.java:72:	MethodArgumentCouldBeFinal: Parameter 'i' is not assigned and could be declared final
+src/skunk/Player.java:72:	ShortVariable: Avoid variables with short names like i
+src/skunk/Player.java:72:	ShortVariable: Avoid variables with short names like i
+src/skunk/SkunkApp.java:2:	CommentRequired: Class comments are required
+src/skunk/SkunkApp.java:2:	CommentRequired: Class comments are required
+src/skunk/SkunkApp.java:4:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:4:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:4:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:4:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:5:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:5:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:5:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:5:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:6:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:6:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:6:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:6:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkApp.java:7:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:7:	CommentRequired: Field comments are required
+src/skunk/SkunkApp.java:9:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkApp.java:9:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkApp.java:29:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkApp.java:29:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkApp.java:29:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/SkunkApp.java:29:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/SkunkDomain.java:3:	UnusedImports: Avoid unused imports such as 'edu.princeton.cs.introcs'
+src/skunk/SkunkDomain.java:3:	UnusedImports: Avoid unused imports such as 'edu.princeton.cs.introcs'
+src/skunk/SkunkDomain.java:5:	CommentRequired: Class comments are required
+src/skunk/SkunkDomain.java:5:	CommentRequired: Class comments are required
+src/skunk/SkunkDomain.java:5:	ModifiedCyclomaticComplexity: The class 'SkunkDomain' has a Modified Cyclomatic Complexity of 5 (Highest = 18).
+src/skunk/SkunkDomain.java:5:	ModifiedCyclomaticComplexity: The class 'SkunkDomain' has a Modified Cyclomatic Complexity of 5 (Highest = 18).
+src/skunk/SkunkDomain.java:5:	StdCyclomaticComplexity: The class 'SkunkDomain' has a Standard Cyclomatic Complexity of 5 (Highest = 18).
+src/skunk/SkunkDomain.java:5:	StdCyclomaticComplexity: The class 'SkunkDomain' has a Standard Cyclomatic Complexity of 5 (Highest = 18).
+src/skunk/SkunkDomain.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:7:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:7:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:8:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:8:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:8:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:8:	ShortVariable: Avoid variables with short names like ui
+src/skunk/SkunkDomain.java:8:	ShortVariable: Avoid variables with short names like ui
+src/skunk/SkunkDomain.java:9:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:9:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:9:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:9:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:10:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:10:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:10:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:10:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:11:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:11:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:11:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:11:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:11:	LooseCoupling: Avoid using implementation types like 'ArrayList'; use the interface instead
+src/skunk/SkunkDomain.java:11:	LooseCoupling: Avoid using implementation types like 'ArrayList'; use the interface instead
+src/skunk/SkunkDomain.java:12:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:12:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:12:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:12:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:14:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:14:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:14:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:14:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:15:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:15:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:15:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:15:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:17:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:17:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:17:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:17:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:18:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:18:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:18:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:18:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:20:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:20:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkDomain.java:20:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:20:	CommentRequired: Field comments are required
+src/skunk/SkunkDomain.java:22:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkDomain.java:22:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkDomain.java:22:	MethodArgumentCouldBeFinal: Parameter 'ui' is not assigned and could be declared final
+src/skunk/SkunkDomain.java:22:	MethodArgumentCouldBeFinal: Parameter 'ui' is not assigned and could be declared final
+src/skunk/SkunkDomain.java:22:	ShortVariable: Avoid variables with short names like ui
+src/skunk/SkunkDomain.java:22:	ShortVariable: Avoid variables with short names like ui
+src/skunk/SkunkDomain.java:28:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
+src/skunk/SkunkDomain.java:28:	UseDiamondOperator: Explicit type arguments can be replaced by Diamond Operator
+src/skunk/SkunkDomain.java:34:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkDomain.java:34:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkDomain.java:34:	CyclomaticComplexity: The method 'run()' has a cyclomatic complexity of 20.
+src/skunk/SkunkDomain.java:34:	CyclomaticComplexity: The method 'run()' has a cyclomatic complexity of 20.
+src/skunk/SkunkDomain.java:34:	ExcessiveMethodLength: Avoid really long methods.
+src/skunk/SkunkDomain.java:34:	ExcessiveMethodLength: Avoid really long methods.
+src/skunk/SkunkDomain.java:34:	ModifiedCyclomaticComplexity: The method 'run' has a Modified Cyclomatic Complexity of 18.
+src/skunk/SkunkDomain.java:34:	ModifiedCyclomaticComplexity: The method 'run' has a Modified Cyclomatic Complexity of 18.
+src/skunk/SkunkDomain.java:34:	NPathComplexity: The method 'run()' has an NPath complexity of 2400
+src/skunk/SkunkDomain.java:34:	NPathComplexity: The method 'run()' has an NPath complexity of 2400
+src/skunk/SkunkDomain.java:34:	NcssCount: The method 'run()' has a NCSS line count of 129.
+src/skunk/SkunkDomain.java:34:	NcssCount: The method 'run()' has a NCSS line count of 129.
+src/skunk/SkunkDomain.java:34:	NcssMethodCount: The method run() has an NCSS line count of 129
+src/skunk/SkunkDomain.java:34:	NcssMethodCount: The method run() has an NCSS line count of 129
+src/skunk/SkunkDomain.java:34:	StdCyclomaticComplexity: The method 'run' has a Standard Cyclomatic Complexity of 18.
+src/skunk/SkunkDomain.java:34:	StdCyclomaticComplexity: The method 'run' has a Standard Cyclomatic Complexity of 18.
+src/skunk/SkunkDomain.java:39:	LocalVariableCouldBeFinal: Local variable 'numberPlayersString' could be declared final
+src/skunk/SkunkDomain.java:39:	LocalVariableCouldBeFinal: Local variable 'numberPlayersString' could be declared final
+src/skunk/SkunkDomain.java:39:	LongVariable: Avoid excessively long variable names like numberPlayersString
+src/skunk/SkunkDomain.java:39:	LongVariable: Avoid excessively long variable names like numberPlayersString
+src/skunk/SkunkDomain.java:46:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/skunk/SkunkDomain.java:46:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/skunk/SkunkDomain.java:58:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:58:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:60:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:60:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:60:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:60:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:60:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:60:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:66:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:66:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:73:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'wantsToRoll' (lines '73'-'60').
+src/skunk/SkunkDomain.java:73:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'wantsToRoll' (lines '73'-'60').
+src/skunk/SkunkDomain.java:73:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'wantsToRoll' (lines '73'-'238').
+src/skunk/SkunkDomain.java:73:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'wantsToRoll' (lines '73'-'238').
+src/skunk/SkunkDomain.java:76:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:76:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:102:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:102:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:102:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:102:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:102:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:102:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:106:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:106:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:113:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:113:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:113:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/skunk/SkunkDomain.java:113:	IfStmtsMustUseBraces: Avoid using if statements without curly braces
+src/skunk/SkunkDomain.java:114:	ControlStatementBraces: This statement should have braces
+src/skunk/SkunkDomain.java:114:	ControlStatementBraces: This statement should have braces
+src/skunk/SkunkDomain.java:119:	AvoidDuplicateLiterals: The String literal "-----------------------" appears 6 times in this file; the first occurrence is on line 119
+src/skunk/SkunkDomain.java:119:	AvoidDuplicateLiterals: The String literal "-----------------------" appears 6 times in this file; the first occurrence is on line 119
+src/skunk/SkunkDomain.java:123:	AvoidDuplicateLiterals: The String literal " -- " appears 8 times in this file; the first occurrence is on line 123
+src/skunk/SkunkDomain.java:123:	AvoidDuplicateLiterals: The String literal " -- " appears 8 times in this file; the first occurrence is on line 123
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:123:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:124:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:124:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:138:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '138'-'238').
+src/skunk/SkunkDomain.java:138:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'i' (lines '138'-'238').
+src/skunk/SkunkDomain.java:138:	ForLoopVariableCount: Too many control variables in the for statement
+src/skunk/SkunkDomain.java:138:	ForLoopVariableCount: Too many control variables in the for statement
+src/skunk/SkunkDomain.java:140:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:140:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:144:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:144:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:144:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:144:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:144:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:144:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:151:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:151:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:160:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:160:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:191:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:192:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:192:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:192:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:192:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:197:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:197:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:197:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:197:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:197:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:197:	UseLocaleWithCaseConversions: When doing a String.toLowerCase()/toUpperCase() call, use a Locale
+src/skunk/SkunkDomain.java:208:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'winner' (lines '208'-'217').
+src/skunk/SkunkDomain.java:208:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'winner' (lines '208'-'217').
+src/skunk/SkunkDomain.java:209:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'winnerScore' (lines '209'-'238').
+src/skunk/SkunkDomain.java:209:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'winnerScore' (lines '209'-'238').
+src/skunk/SkunkDomain.java:213:	LocalVariableCouldBeFinal: Local variable 'nextPlayer' could be declared final
+src/skunk/SkunkDomain.java:213:	LocalVariableCouldBeFinal: Local variable 'nextPlayer' could be declared final
+src/skunk/SkunkDomain.java:214:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:214:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:214:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:214:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:215:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:215:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:217:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'winner' (lines '217'-'217').
+src/skunk/SkunkDomain.java:217:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'winner' (lines '217'-'217').
+src/skunk/SkunkDomain.java:218:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'winnerScore' (lines '218'-'238').
+src/skunk/SkunkDomain.java:218:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'winnerScore' (lines '218'-'238').
+src/skunk/SkunkDomain.java:218:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:218:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/skunk/SkunkDomain.java:222:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:222:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:222:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:222:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:222:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:222:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:223:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:223:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:223:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:223:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:223:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:223:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:224:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:224:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:224:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:224:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:232:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:233:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:233:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:241:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:241:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:245:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:245:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/skunk/SkunkDomain.java:248:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkDomain.java:248:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkDomain.java:248:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/SkunkDomain.java:248:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/SkunkUI.java:2:	UnusedImports: Avoid unused imports such as 'edu.princeton.cs.introcs'
+src/skunk/SkunkUI.java:2:	UnusedImports: Avoid unused imports such as 'edu.princeton.cs.introcs'
+src/skunk/SkunkUI.java:4:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/skunk/SkunkUI.java:4:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/skunk/SkunkUI.java:4:	CommentRequired: Class comments are required
+src/skunk/SkunkUI.java:4:	CommentRequired: Class comments are required
+src/skunk/SkunkUI.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkUI.java:7:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/skunk/SkunkUI.java:7:	CommentRequired: Field comments are required
+src/skunk/SkunkUI.java:7:	CommentRequired: Field comments are required
+src/skunk/SkunkUI.java:9:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:9:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:9:	MethodArgumentCouldBeFinal: Parameter 'skunkDomain' is not assigned and could be declared final
+src/skunk/SkunkUI.java:9:	MethodArgumentCouldBeFinal: Parameter 'skunkDomain' is not assigned and could be declared final
+src/skunk/SkunkUI.java:15:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:15:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:15:	MethodArgumentCouldBeFinal: Parameter 'question' is not assigned and could be declared final
+src/skunk/SkunkUI.java:15:	MethodArgumentCouldBeFinal: Parameter 'question' is not assigned and could be declared final
+src/skunk/SkunkUI.java:15:	MissingOverride: The method 'promptReadAndReturn(String)' is missing an @Override annotation.
+src/skunk/SkunkUI.java:15:	MissingOverride: The method 'promptReadAndReturn(String)' is missing an @Override annotation.
+src/skunk/SkunkUI.java:18:	LocalVariableCouldBeFinal: Local variable 'result' could be declared final
+src/skunk/SkunkUI.java:18:	LocalVariableCouldBeFinal: Local variable 'result' could be declared final
+src/skunk/SkunkUI.java:19:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'result'
+src/skunk/SkunkUI.java:19:	UnnecessaryLocalBeforeReturn: Consider simply returning the value vs storing it in local variable 'result'
+src/skunk/SkunkUI.java:22:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:22:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:22:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/SkunkUI.java:22:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/skunk/SkunkUI.java:28:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:28:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:28:	MethodArgumentCouldBeFinal: Parameter 'toPrint' is not assigned and could be declared final
+src/skunk/SkunkUI.java:28:	MethodArgumentCouldBeFinal: Parameter 'toPrint' is not assigned and could be declared final
+src/skunk/SkunkUI.java:28:	MissingOverride: The method 'print(String)' is missing an @Override annotation.
+src/skunk/SkunkUI.java:28:	MissingOverride: The method 'print(String)' is missing an @Override annotation.
+src/skunk/SkunkUI.java:34:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:34:	CommentRequired: Public method and constructor comments are required
+src/skunk/SkunkUI.java:34:	MethodArgumentCouldBeFinal: Parameter 'toPrint' is not assigned and could be declared final
+src/skunk/SkunkUI.java:34:	MethodArgumentCouldBeFinal: Parameter 'toPrint' is not assigned and could be declared final
+src/skunk/SkunkUI.java:34:	MissingOverride: The method 'println(String)' is missing an @Override annotation.
+src/skunk/SkunkUI.java:34:	MissingOverride: The method 'println(String)' is missing an @Override annotation.
+src/skunk/UI.java:3:	CommentRequired: Class comments are required
+src/skunk/UI.java:3:	CommentRequired: Class comments are required
+src/skunk/UI.java:3:	ShortClassName: Avoid short class names like UI
+src/skunk/UI.java:3:	ShortClassName: Avoid short class names like UI
+src/skunk/UI.java:5:	CommentRequired: Public method and constructor comments are required
+src/skunk/UI.java:5:	CommentRequired: Public method and constructor comments are required
+src/skunk/UI.java:7:	CommentRequired: Public method and constructor comments are required
+src/skunk/UI.java:7:	CommentRequired: Public method and constructor comments are required
+src/skunk/UI.java:9:	CommentRequired: Public method and constructor comments are required
+src/skunk/UI.java:9:	CommentRequired: Public method and constructor comments are required
