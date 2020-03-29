@@ -31,11 +31,7 @@ public class SkunkDomain
 		this.oneMoreRoll = false;
 	}
 
-	public boolean run()
-	{
-		userInterface.println("Welcome to Skunk 0.47\n");
-
-		// players registration.
+	public void playerRegistration() {
 		String numberPlayersString = skunkUI.promptReadAndReturn("How many players?");
 		this.numberOfPlayers = Integer.parseInt(numberPlayersString);
 
@@ -45,6 +41,13 @@ public class SkunkDomain
 			playerNames[playerNumber] = StdIn.readLine();
 			this.players.add(new Player(50));
 		}
+	}
+	
+	public boolean run()
+	{
+		userInterface.println("Welcome to Skunk 0.47\n");
+
+		playerRegistration();
 		
 		// Setup and start game (keep).
 		activePlayerIndex = 0;

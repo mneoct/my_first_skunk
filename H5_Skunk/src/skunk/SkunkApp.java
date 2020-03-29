@@ -26,9 +26,8 @@ public class SkunkApp
 	
 	public SkunkApp()
 	{
-		skunkUI = new SkunkUI();
+		skunkUI = new SkunkUI(skunkDomain);
 		skunkDomain = new SkunkDomain(skunkUI);
-		skunkUI.setDomain(skunkDomain);
 		setNumberOfPlayers(0);
 		createArrayPlayerNames(20);
 	}

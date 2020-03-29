@@ -1,15 +1,19 @@
 package skunk;
-import edu.princeton.cs.introcs.*;
+import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.StdIn;
 
 public class SkunkUI implements UI
 {
 
 	public SkunkDomain skunkDomain;
 
+	public SkunkUI(SkunkDomain skunkDomain) {
+		this.skunkDomain = skunkDomain;
+	}
+	
 	public void setDomain(SkunkDomain skunkDomain)
 	{
 		this.skunkDomain = skunkDomain;
-
 	}
 
 	public String promptReadAndReturn(String question)
