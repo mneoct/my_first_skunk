@@ -106,6 +106,46 @@ public class SkunkDomain
 				"Roll of " + skunkDice.toString() + ", gives new turn score of " + activePlayer.getTurnScore());
 	}
 	
+	public void playerDecidesToRoll(boolean wantsToRollInput) {
+		while (wantsToRollInput)
+		{
+			activePlayer.setRollScore(0);
+			skunkDice.roll();
+			
+			if (skunkEventCheck()) {
+				wantsToRollInput = false;
+				break;
+			}
+
+			resultOfRollSuccess();
+			wantsToRollInput = askToRoll();
+		}
+	}
+	
+	public void endTurnEvaluation(int newScore){
+		userInterface.println("End of turn for " + playerNames[activePlayerIndex]);
+		userInterface.println("Score for this turn is " + activePlayer.getTurnScore() + ", added to...");
+		userInterface.println("Previous round score of " + activePlayer.getRoundScore());
+		userInterface.println("Giving new round score of " + newScore);
+
+		userInterface.println("");
+
+		userInterface.println("Scoreboard: ");
+		userInterface.println("Kitty has " + kitty);
+		userInterface.println("player name -- turn score -- round score -- chips");
+		userInterface.println("-----------------------");
+
+		activePlayer.setRoundScore(newScore);
+		
+		for (int i = 0; i < numberOfPlayers; i++)
+		{
+			userInterface.println(playerNames[i] + " -- " + players.get(i).turnScore + " -- " + players.get(i).roundScore
+					+ " -- " + players.get(i).getNumberChips());
+		}
+		userInterface.println("-----------------------");
+
+		userInterface.println("Turn passes to right...");
+	}
 	public boolean run()
 	{
 		userInterface.println("Welcome to Skunk 0.47\n");
@@ -124,47 +164,18 @@ public class SkunkDomain
 			userInterface.println("Next player is " + playerNames[activePlayerIndex] + ".");
 			boolean wantsToRoll = askToRoll();
 
-			while (wantsToRoll)
-			{
-				activePlayer.setRollScore(0);
-				skunkDice.roll();
-				
-				if (skunkEventCheck()) {
-					wantsToRoll = false;
-					break;
-				}
-
-				resultOfRollSuccess();
-				wantsToRoll = askToRoll();
-			}
-
-			userInterface.println("End of turn for " + playerNames[activePlayerIndex]);
-			userInterface.println("Score for this turn is " + activePlayer.getTurnScore() + ", added to...");
-			userInterface.println("Previous round score of " + activePlayer.getRoundScore());
-			activePlayer.setRoundScore(activePlayer.getRoundScore() + activePlayer.getTurnScore());
-			userInterface.println("Giving new round score of " + activePlayer.getRoundScore());
-
-			userInterface.println("");
+			playerDecidesToRoll(wantsToRoll);
+			
+			int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
+			
+			endTurnEvaluation(activePlayerNewScore);
+			
 			if (activePlayer.getRoundScore() >= 100)
 				gameNotOver = false;
 
-			userInterface.println("Scoreboard: ");
-			userInterface.println("Kitty has " + kitty);
-			userInterface.println("player name -- turn score -- round score -- chips");
-			userInterface.println("-----------------------");
-
-			for (int i = 0; i < numberOfPlayers; i++)
-			{
-				userInterface.println(playerNames[i] + " -- " + players.get(i).turnScore + " -- " + players.get(i).roundScore
-						+ " -- " + players.get(i).getNumberChips());
-			}
-			userInterface.println("-----------------------");
-
-			userInterface.println("Turn passes to right...");
-
 			activePlayerIndex = (activePlayerIndex + 1) % numberOfPlayers;
 			activePlayer = players.get(activePlayerIndex);
-
+			activePlayer.turnScore = 0;
 		}
 		
 		// last round: everyone but last activePlayer gets another shot
