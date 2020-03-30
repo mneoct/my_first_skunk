@@ -37,9 +37,9 @@ public class SkunkApp
 	 * 
 	 * @return
 	 */
-	public boolean run()
+	public void run()
 	{
-		return skunkDomain.run();
+		skunkDomain.run();
 	}
 
 	public static void main(String[] args)
