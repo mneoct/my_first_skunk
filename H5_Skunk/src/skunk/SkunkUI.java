@@ -6,6 +6,7 @@ public class SkunkUI implements UI
 {
 
 	public SkunkDomain skunkDomain;
+	public SkunkBadEvents skunkBadEvents;
 
 	public SkunkUI(SkunkDomain skunkDomain) {
 		this.skunkDomain = skunkDomain;
@@ -14,6 +15,11 @@ public class SkunkUI implements UI
 	public void setDomain(SkunkDomain skunkDomain)
 	{
 		this.skunkDomain = skunkDomain;
+	}
+	
+	public void setBadDomain(SkunkBadEvents skunkBadEvents)
+	{
+		this.skunkBadEvents = skunkBadEvents;
 	}
 
 	public String promptReadAndReturn(String question)

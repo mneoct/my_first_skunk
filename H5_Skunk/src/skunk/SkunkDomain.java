@@ -9,7 +9,7 @@ public class SkunkDomain
 	public int numberOfPlayers;
 	public String[] playerNames;
 	public ArrayList<Player> players;
-	public int kitty;
+	public static int kitty;
 
 	public Player activePlayer;
 	public int activePlayerIndex;
@@ -43,26 +43,26 @@ public class SkunkDomain
 		}
 	}
 	
-	public void skunkEventUniversal(String skunkMessageInput, int penaltyInput, Player currentPlayer) {
+	private void skunkEventUniversal(String skunkMessageInput, int penaltyInput, Player currentPlayer) {
 		userInterface.println(skunkMessageInput);
 		kitty += penaltyInput;
 		currentPlayer.setNumberChips(currentPlayer.getNumberChips() - 1);
 		currentPlayer.setTurnScore(0);
 	}
 	
-	public void singleSkunk(Player currentPlayer) {
+	private void singleSkunk(Player currentPlayer) {
 		String skunkMessage = "One Skunk! You lose the turn, the turn score, plus pay 1 chip to the kitty";
 		int penalty = 1;
 		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
 	}
 	
-	public void singleSkunkDeuce(Player currentPlayer) {
+	private void singleSkunkDeuce(Player currentPlayer) {
 		String skunkMessage = "Skunks and Deuce! You lose the turn, the turn score, plus pay 2 chips to the kitty";
 		int penalty = 2;
 		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
 	}
 	
-	public void doubleSkunk(Player currentPlayer) {
+	private void doubleSkunk(Player currentPlayer) {
 		String skunkMessage = "Two Skunks! You lose the turn, the round score, plus pay 4 chips to the kitty";
 		int penalty = 4;
 		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
