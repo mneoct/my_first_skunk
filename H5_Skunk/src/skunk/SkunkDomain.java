@@ -1,15 +1,17 @@
 package skunk;
 import java.util.ArrayList;
+
 import edu.princeton.cs.introcs.StdIn;
 
 public class SkunkDomain
 {
 	public SkunkUI skunkUI;
 	public UI userInterface;
+	public static int kitty;
+	
 	public int numberOfPlayers;
 	public String[] playerNames;
 	public ArrayList<Player> players;
-	public static int kitty;
 
 	public Player activePlayer;
 	public int activePlayerIndex;
@@ -42,86 +44,7 @@ public class SkunkDomain
 			this.players.add(new Player(50));
 		}
 	}
-	
-	private void skunkEventUniversal(String skunkMessageInput, int penaltyInput, Player currentPlayer) {
-		userInterface.println(skunkMessageInput);
-		kitty += penaltyInput;
-		currentPlayer.setNumberChips(currentPlayer.getNumberChips() - 1);
-		currentPlayer.setTurnScore(0);
-	}
-	
-	private void singleSkunk(Player currentPlayer) {
-		String skunkMessage = "One Skunk! You lose the turn, the turn score, plus pay 1 chip to the kitty";
-		int penalty = 1;
-		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
-	}
-	
-	private void singleSkunkDeuce(Player currentPlayer) {
-		String skunkMessage = "Skunks and Deuce! You lose the turn, the turn score, plus pay 2 chips to the kitty";
-		int penalty = 2;
-		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
-	}
-	
-	private void doubleSkunk(Player currentPlayer) {
-		String skunkMessage = "Two Skunks! You lose the turn, the round score, plus pay 4 chips to the kitty";
-		int penalty = 4;
-		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
-	}
-	
-	public boolean skunkEventCheck() {
-		// check if skunkDice has been rolled? and there's an activePlayer.
-		// Here, it works since skunkEventCheck is called after they are initialized,
-		// but may not be when called elsewhere.
-		if (skunkDice.getLastRoll() == 2)
-		{
-			doubleSkunk(activePlayer);
-			activePlayer.setRoundScore(0);
-			return true;
-		}
-		else if (skunkDice.getLastRoll() == 3)
-		{
-			singleSkunkDeuce(activePlayer);
-			return true;
-		}
-		else if (getDie1Roll() == 1 || getDie2Roll() == 1)
-		{
-			singleSkunk(activePlayer);
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-	
-	public boolean askToRoll() {
-		String wantsToRollStr = userInterface.promptReadAndReturn("Roll? y or n");
-		return 'y' == wantsToRollStr.toLowerCase().charAt(0);
-	}
-	
-	public void resultOfRollSuccess() {
-		activePlayer.setRollScore(skunkDice.getLastRoll());
-		activePlayer.setTurnScore(activePlayer.getTurnScore() + skunkDice.getLastRoll());
-		userInterface.println(
-				"Roll of " + skunkDice.toString() + ", gives new turn score of " + activePlayer.getTurnScore());
-	}
-	
-	public void playerDecidesToRoll(boolean wantsToRollInput) {
-		boolean internalRollDecision = wantsToRollInput;
-		while (internalRollDecision)
-		{
-			activePlayer.setRollScore(0);
-			skunkDice.roll();
-			
-			if (skunkEventCheck()) {
-				internalRollDecision = false;
-				break;
-			}
 
-			resultOfRollSuccess();
-			internalRollDecision = askToRoll();
-		}
-	}
 	
 	public void endTurnEvaluation(int newScore){
 		userInterface.println("End of turn for " + playerNames[activePlayerIndex]);
@@ -202,15 +125,16 @@ public class SkunkDomain
 		{
 			userInterface.println("Next player is " + playerNames[activePlayerIndex] + ".");
 			
-			boolean wantsToRoll = askToRoll();
-			playerDecidesToRoll(wantsToRoll);
+			boolean wantsToRoll = SkunkRoll.askToRoll();
+			SkunkRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
 			
 			int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
 			
 			endTurnEvaluation(activePlayerNewScore);
 			
-			if (activePlayer.getRoundScore() >= 100)
+			if (activePlayer.getRoundScore() >= 100) {
 				gameNotOver = false;
+			}
 
 			activePlayerIndex = (activePlayerIndex + 1) % numberOfPlayers;
 			activePlayer = players.get(activePlayerIndex);
@@ -224,8 +148,8 @@ public class SkunkDomain
 		{
 			userInterface.println("Last round for player " + playerNames[activePlayerIndex] + "...");
 
-			boolean wantsToRoll = askToRoll();			
-			playerDecidesToRoll(wantsToRoll);
+			boolean wantsToRoll = SkunkRoll.askToRoll();
+			SkunkRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
 			
 			int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
 			

@@ -1,6 +1,6 @@
 package skunk;
-import edu.princeton.cs.introcs.StdOut;
 import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class SkunkUI implements UI
 {
@@ -10,6 +10,10 @@ public class SkunkUI implements UI
 
 	public SkunkUI(SkunkDomain skunkDomain) {
 		this.skunkDomain = skunkDomain;
+	}
+	
+	public SkunkUI(SkunkBadEvents skunkDomain) {
+		this.skunkBadEvents = skunkDomain;
 	}
 	
 	public void setDomain(SkunkDomain skunkDomain)
@@ -22,6 +26,7 @@ public class SkunkUI implements UI
 		this.skunkBadEvents = skunkBadEvents;
 	}
 
+	@Override
 	public String promptReadAndReturn(String question)
 	{
 		StdOut.print(question + " => ");
@@ -35,12 +40,14 @@ public class SkunkUI implements UI
 
 	}
 
+	@Override
 	public void print(String toPrint)
 	{
 		StdOut.print(toPrint);
 
 	}
 
+	@Override
 	public void println(String toPrint)
 	{
 		StdOut.println(toPrint);

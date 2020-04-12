@@ -1,43 +1,34 @@
 package skunk;
-
-import java.util.ArrayList;
+import edu.princeton.cs.introcs.StdOut;
 
 public class SkunkBadEvents {
-	public SkunkUI skunkUI;
-	public UI userInterface;
 	
-	public SkunkBadEvents(SkunkUI ui)
-	{
-		this.skunkUI = ui;
-		this.userInterface = ui; // hide behind the interface UI
-	}
-	
-	private void skunkEventUniversal(String skunkMessageInput, int penaltyInput, Player currentPlayer) {
-		userInterface.println(skunkMessageInput);
+	private static void skunkEventUniversal(String skunkMessageInput, int penaltyInput, Player currentPlayer) {
+		StdOut.println(skunkMessageInput);
 		SkunkDomain.kitty += penaltyInput;
 		currentPlayer.setNumberChips(currentPlayer.getNumberChips() - 1);
 		currentPlayer.setTurnScore(0);
 	}
 	
-	private void singleSkunk(Player currentPlayer) {
+	private static void singleSkunk(Player currentPlayer) {
 		String skunkMessage = "One Skunk! You lose the turn, the turn score, plus pay 1 chip to the kitty";
 		int penalty = 1;
 		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
 	}
 	
-	private void singleSkunkDeuce(Player currentPlayer) {
+	private static void singleSkunkDeuce(Player currentPlayer) {
 		String skunkMessage = "Skunks and Deuce! You lose the turn, the turn score, plus pay 2 chips to the kitty";
 		int penalty = 2;
 		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
 	}
 	
-	private void doubleSkunk(Player currentPlayer) {
+	private static void doubleSkunk(Player currentPlayer) {
 		String skunkMessage = "Two Skunks! You lose the turn, the round score, plus pay 4 chips to the kitty";
 		int penalty = 4;
 		skunkEventUniversal(skunkMessage, penalty, currentPlayer);
 	}
 	
-	public boolean skunkEventCheck(Player activePlayer, Dice skunkDiceInput) {
+	public static boolean skunkEventCheck(Player activePlayer, Dice skunkDiceInput) {
 		// check if skunkDice has been rolled? and there's an activePlayer.
 		// Here, it works since skunkEventCheck is called after they are initialized,
 		// but may not be when called elsewhere.
@@ -63,11 +54,11 @@ public class SkunkBadEvents {
 		}
 	}
 	
-	private int getDie2Roll(Dice skunkDiceInput) {
+	private static int getDie2Roll(Dice skunkDiceInput) {
 		return skunkDiceInput.getDie2().getLastRoll();
 	}
 
-	private int getDie1Roll (Dice skunkDiceInput) {
+	private static int getDie1Roll (Dice skunkDiceInput) {
 		return skunkDiceInput.getDie1().getLastRoll();
 	}
 	
