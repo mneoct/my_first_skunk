@@ -45,7 +45,6 @@ public class SkunkDomain
 		}
 	}
 
-	
 	public void endTurnEvaluation(int newScore){
 		userInterface.println("End of turn for " + playerNames[activePlayerIndex]);
 		userInterface.println("Score for this turn is " + activePlayer.getTurnScore() + ", added to...");
@@ -106,6 +105,46 @@ public class SkunkDomain
 		userInterface.println("-----------------------");
 	}
 	
+	public void gameplay(boolean finalRound) {
+		activePlayer.setTurnScore(0);
+		if (finalRound == false) {
+			userInterface.println("Next player is " + playerNames[activePlayerIndex] + ".");
+		}
+		else {
+			userInterface.println("Last round for player " + playerNames[activePlayerIndex] + "...");
+		}
+				
+		boolean wantsToRoll = SkunkRoll.askToRoll();
+		SkunkRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
+		
+		int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
+		
+		endTurnEvaluation(activePlayerNewScore);
+	}
+	
+	public void gameRegular() {
+		boolean notFinalTurn = true;
+		
+		while (notFinalTurn)
+		{
+			gameplay(false);
+			
+			if (activePlayer.getRoundScore() >= 100) {
+				notFinalTurn = false;
+			}
+
+			activePlayerIndex = (activePlayerIndex + 1) % numberOfPlayers;
+			activePlayer = players.get(activePlayerIndex);
+		}
+	}
+	
+	public void gameFinalRound() {
+		for (int i = activePlayerIndex, count = 0; count < numberOfPlayers - 1; i = (i++) % numberOfPlayers, count++)
+		{
+			gameplay(true);	
+		}
+	}
+	
 	public void run()
 	{
 		userInterface.println("Welcome to Skunk 0.47\n");
@@ -118,62 +157,17 @@ public class SkunkDomain
 
 		// Game itself. 
 		userInterface.println("Starting game...\n");
-		
-		boolean gameNotOver = true;
-		
-		while (gameNotOver)
-		{
-			userInterface.println("Next player is " + playerNames[activePlayerIndex] + ".");
-			
-			boolean wantsToRoll = SkunkRoll.askToRoll();
-			SkunkRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
-			
-			int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
-			
-			endTurnEvaluation(activePlayerNewScore);
-			
-			if (activePlayer.getRoundScore() >= 100) {
-				gameNotOver = false;
-			}
-
-			activePlayerIndex = (activePlayerIndex + 1) % numberOfPlayers;
-			activePlayer = players.get(activePlayerIndex);
-			activePlayer.setTurnScore(0);
-		}
+		gameRegular();
 		
 		// Last round: everyone but last activePlayer gets another shot		
 		userInterface.println("Last turn for all...");
-
-		for (int i = activePlayerIndex, count = 0; count < numberOfPlayers - 1; i = (i++) % numberOfPlayers, count++)
-		{
-			userInterface.println("Last round for player " + playerNames[activePlayerIndex] + "...");
-
-			boolean wantsToRoll = SkunkRoll.askToRoll();
-			SkunkRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
-			
-			int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
-			
-			activePlayer.setRoundScore(activePlayerNewScore);
-			
-			userInterface.println("Last roll of " + skunkDice.toString() 
-			+ ", giving final round score of " + activePlayer.getRollScore());
-			
-			activePlayer.setTurnScore(0);
-		}
+		gameFinalRound();
 		
 		// final report.
 
 		int winner = finalComparisonGetWinner();
 		
 		finalReport(winner); 
-	}
-
-	private int getDie2Roll() {
-		return skunkDice.getDie2().getLastRoll();
-	}
-
-	private int getDie1Roll() {
-		return skunkDice.getDie1().getLastRoll();
 	}
 
 	public static void main(String[] args)
