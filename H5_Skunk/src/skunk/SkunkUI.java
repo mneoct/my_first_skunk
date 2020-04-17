@@ -6,13 +6,13 @@ public class SkunkUI implements UI
 {
 
 	public SkunkDomain skunkDomain;
-	public SkunkBadEvents skunkBadEvents;
+	public SkunkTurnBad skunkBadEvents;
 
 	public SkunkUI(SkunkDomain skunkDomain) {
 		this.skunkDomain = skunkDomain;
 	}
 	
-	public SkunkUI(SkunkBadEvents skunkDomain) {
+	public SkunkUI(SkunkTurnBad skunkDomain) {
 		this.skunkBadEvents = skunkDomain;
 	}
 	
@@ -21,7 +21,7 @@ public class SkunkUI implements UI
 		this.skunkDomain = skunkDomain;
 	}
 	
-	public void setBadDomain(SkunkBadEvents skunkBadEvents)
+	public void setBadDomain(SkunkTurnBad skunkBadEvents)
 	{
 		this.skunkBadEvents = skunkBadEvents;
 	}

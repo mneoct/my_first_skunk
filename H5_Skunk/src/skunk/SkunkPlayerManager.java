@@ -10,7 +10,7 @@ public class SkunkPlayerManager {
 	
 	public static int numberOfPlayers;
 	public static String[] playerNames = new String[20];
-	public static ArrayList<Player> players = new ArrayList<Player>();;
+	public static ArrayList<SkunkPlayer> players = new ArrayList<SkunkPlayer>();;
 	public static Scanner playerNameInput = new Scanner(System.in);
 	
 	// no idea how UI works so its copied here.
@@ -29,7 +29,7 @@ public class SkunkPlayerManager {
 		{
 			StdOut.print("Enter name of player " + (playerNumber + 1) + ": ");
 			playerNames[playerNumber] = StdIn.readLine();
-			players.add(new Player(50));
+			players.add(new SkunkPlayer(50));
 		}
 	}
 }

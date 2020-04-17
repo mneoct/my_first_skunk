@@ -1,6 +1,6 @@
 package skunk;
 
-public class Player
+public class SkunkPlayer
 {
 	public int rollScore;
 	public int turnScore;
@@ -8,7 +8,7 @@ public class Player
 	public int gameScore; // for now, same as roundScore
 	public int numberChips;
 
-	public Player()
+	public SkunkPlayer()
 	{
 		this.rollScore = 0;
 		this.turnScore = 0;
@@ -17,7 +17,7 @@ public class Player
 		this.numberChips = 50; // for now
 	}
 
-	public Player(int startingChipsPerPlayer)
+	public SkunkPlayer(int startingChipsPerPlayer)
 	{
 		this();
 		this.numberChips = startingChipsPerPlayer;

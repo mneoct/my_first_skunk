@@ -9,9 +9,9 @@ public class SkunkDomain
 	
 	public int numberOfPlayers;
 	public String[] playerNames;
-	public ArrayList<Player> players;
+	public ArrayList<SkunkPlayer> players;
 
-	public Player activePlayer;
+	public SkunkPlayer activePlayer;
 	public int activePlayerIndex;
 
 	public boolean wantsToQuit;
@@ -25,7 +25,7 @@ public class SkunkDomain
 		this.userInterface = ui; // hide behind the interface UI
 
 		this.playerNames = new String[20];
-		this.players = new ArrayList<Player>();
+		this.players = new ArrayList<SkunkPlayer>();
 		this.skunkDice = new Dice();
 		this.wantsToQuit = false;
 		this.oneMoreRoll = false;
@@ -56,17 +56,17 @@ public class SkunkDomain
 		userInterface.println("Turn passes to right...");
 	}
 		
-	public void gameplay(boolean finalRound) {
+	public void gameplay(boolean isFinalRound) {
 		activePlayer.setTurnScore(0);
-		if (finalRound == false) {
+		if (isFinalRound == false) {
 			userInterface.println("Next player is " + playerNames[activePlayerIndex] + ".");
 		}
 		else {
 			userInterface.println("Last round for player " + playerNames[activePlayerIndex] + "...");
 		}
 				
-		boolean wantsToRoll = SkunkRoll.askToRoll();
-		SkunkRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
+		boolean wantsToRoll = SkunkTurnRoll.askToRoll();
+		SkunkTurnRoll.playerDecidesToRoll(wantsToRoll, activePlayer, skunkDice);
 		
 		int activePlayerNewScore = activePlayer.getRoundScore() + activePlayer.getTurnScore();
 		
@@ -74,14 +74,14 @@ public class SkunkDomain
 	}
 	
 	public void gameRegular() {
-		boolean notFinalTurn = true;
+		boolean isFinalTurn = false;
 		
-		while (notFinalTurn)
+		while (!isFinalTurn)
 		{
 			gameplay(false);
 			
 			if (activePlayer.getRoundScore() >= 100) {
-				notFinalTurn = false;
+				isFinalTurn = true;
 			}
 
 			activePlayerIndex = (activePlayerIndex + 1) % numberOfPlayers;
@@ -90,9 +90,10 @@ public class SkunkDomain
 	}
 	
 	public void gameFinalRound() {
+		boolean isFinalRound = true;
 		for (int i = activePlayerIndex, count = 0; count < numberOfPlayers - 1; i = (i++) % numberOfPlayers, count++)
 		{
-			gameplay(true);	
+			gameplay(isFinalRound);	
 		}
 	}
 	
