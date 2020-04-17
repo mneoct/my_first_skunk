@@ -58,6 +58,7 @@ public class Dice
 
 	}
 
+	@Override
 	public String toString()
 	{
 		return "Dice with last roll: " + getLastRoll() + " => " + die1.getLastRoll() + " + " + die2.getLastRoll();
@@ -85,6 +86,11 @@ public class Dice
 		this.die2 = d;
 	}
 
+	public static int getDieRoll(Dice skunkDiceInput, int dieNumber) {
+		Die DieInternal = dieNumber == 1 ? skunkDiceInput.getDie1(): skunkDiceInput.getDie2();
+		return DieInternal.getLastRoll();
+	}
+	
 	public static final int NUM_TRIALS = 360;
 
 	public static void main(String[] args)
@@ -97,8 +103,9 @@ public class Dice
 			dice1.roll();
 			StdOut.println(dice1);
 
-			if (dice1.getLastRoll() == 2)
+			if (dice1.getLastRoll() == 2) {
 				doubleSkunkCount++;
+			}
 		}
 
 		StdOut.println("Actual count: " + doubleSkunkCount);

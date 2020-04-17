@@ -6,22 +6,14 @@ import java.util.Scanner;
 import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 
-public class SkunkPlayer {
+public class SkunkPlayerManager {
 	
 	public static int numberOfPlayers;
-	public static String[] playerNames;
-	public static ArrayList<Player> players;
+	public static String[] playerNames = new String[20];
+	public static ArrayList<Player> players = new ArrayList<Player>();;
 	public static Scanner playerNameInput = new Scanner(System.in);
 	
-	public SkunkPlayer()
-	{
-		SkunkPlayer.playerNames = new String[20];
-		SkunkPlayer.players = new ArrayList<Player>();
-	}
-	
-	public Player activePlayer;
-	public int activePlayerIndex;
-	
+	// no idea how UI works so its copied here.
 	public String promptReadAndReturn(String question)
 	{
 		StdOut.print(question + " => ");
@@ -36,7 +28,7 @@ public class SkunkPlayer {
 		for (int playerNumber = 0; playerNumber < numberOfPlayers; playerNumber++)
 		{
 			StdOut.print("Enter name of player " + (playerNumber + 1) + ": ");
-			playerNames[playerNumber] = playerNameInput.nextLine();
+			playerNames[playerNumber] = StdIn.readLine();
 			players.add(new Player(50));
 		}
 	}

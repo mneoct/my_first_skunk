@@ -1,8 +1,6 @@
 package skunk;
 import java.util.ArrayList;
 
-import edu.princeton.cs.introcs.StdIn;
-
 public class SkunkDomain
 {
 	public SkunkUI skunkUI;
@@ -33,18 +31,6 @@ public class SkunkDomain
 		this.oneMoreRoll = false;
 	}
 
-	public void playerRegistration() {
-		String numberPlayersString = skunkUI.promptReadAndReturn("How many players?");
-		this.numberOfPlayers = Integer.parseInt(numberPlayersString);
-
-		for (int playerNumber = 0; playerNumber < numberOfPlayers; playerNumber++)
-		{
-			userInterface.print("Enter name of player " + (playerNumber + 1) + ": ");
-			playerNames[playerNumber] = StdIn.readLine();
-			this.players.add(new Player(50));
-		}
-	}
-
 	public void endTurnEvaluation(int newScore){
 		userInterface.println("End of turn for " + playerNames[activePlayerIndex]);
 		userInterface.println("Score for this turn is " + activePlayer.getTurnScore() + ", added to...");
@@ -69,42 +55,7 @@ public class SkunkDomain
 
 		userInterface.println("Turn passes to right...");
 	}
-	
-	public int finalComparisonGetWinner() {
-		int winner = 0;
-		int winnerScore = 0;
 		
-		for (int player = 0; player < numberOfPlayers; player++)
-		{
-			Player nextPlayer = players.get(player);
-			userInterface.println("Final round score for " + playerNames[player] + " is " + nextPlayer.getRoundScore() + ".");
-			if (nextPlayer.getRoundScore() > winnerScore)
-			{
-				winner = player;
-				winnerScore = nextPlayer.getRoundScore();
-			}
-		}
-		return winner;
-	}
-	
-	public void finalReport(int winnerIndex) {
-		userInterface.println("Round winner is " + playerNames[winnerIndex] + " with score of " + players.get(winnerIndex).getRoundScore());
-		players.get(winnerIndex).setNumberChips(players.get(winnerIndex).getNumberChips() + kitty);
-		userInterface.println("\nRound winner earns " + kitty + ", finishing with " + players.get(winnerIndex).getNumberChips());
-
-		userInterface.println("\nFinal scoreboard for this round:");
-		userInterface.println("player name -- round score -- total chips");
-		userInterface.println("-----------------------");
-
-		for (int pNumber = 0; pNumber < numberOfPlayers; pNumber++)
-		{
-			userInterface.println(playerNames[pNumber] + " -- " + players.get(pNumber).roundScore + " -- "
-					+ players.get(pNumber).getNumberChips());
-		}
-
-		userInterface.println("-----------------------");
-	}
-	
 	public void gameplay(boolean finalRound) {
 		activePlayer.setTurnScore(0);
 		if (finalRound == false) {
@@ -149,9 +100,11 @@ public class SkunkDomain
 	{
 		userInterface.println("Welcome to Skunk 0.47\n");
 
-		playerRegistration();
+		SkunkPlayerManager.playerRegistration();
+		players = SkunkPlayerManager.players;
+		playerNames = SkunkPlayerManager.playerNames;
+		numberOfPlayers = SkunkPlayerManager.numberOfPlayers;
 		
-		// Setup and start game (keep).
 		activePlayerIndex = 0;
 		activePlayer = players.get(activePlayerIndex);
 
@@ -159,15 +112,16 @@ public class SkunkDomain
 		userInterface.println("Starting game...\n");
 		gameRegular();
 		
-		// Last round: everyone but last activePlayer gets another shot		
+		// Last round: everyone but last activePlayer gets another shot
+		
 		userInterface.println("Last turn for all...");
 		gameFinalRound();
 		
 		// final report.
 
-		int winner = finalComparisonGetWinner();
+		int winner = SkunkEndGame.finalComparisonGetWinner(numberOfPlayers, playerNames, players);
 		
-		finalReport(winner); 
+		SkunkEndGame.finalReport(winner, playerNames, players, numberOfPlayers); 
 	}
 
 	public static void main(String[] args)
